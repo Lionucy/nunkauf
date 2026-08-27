@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nunkauf.com — Premium Domain Acquisition</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Oswald:wght@300;400&display=swap" rel="stylesheet">
+<style>
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #f5f2ed;
+  color: #0d0d0d;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+/* ─── LOGO MASTHEAD ─── */
+.logo-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 28px 32px 22px;
+}
+.logo-mark {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.logo-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #0d0d0d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #f5f2ed;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
+}
+.logo-name {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #0d0d0d;
+  line-height: 1.15;
+  text-align: left;
+}
+.logo-tagline {
+  font-family: 'Oswald', sans-serif;
+  font-size: 8.5px;
+  font-weight: 300;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #888;
+  margin-top: 4px;
+  text-align: left;
+}
+
+/* ─── CONTENT WRAPPER ─── */
+.content {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ─── 1. HERO IMAGE — same width as content/columns ─── */
+/* aspect-ratio: 2/1 = original 3:2 height × 0.75 (one-quarter reduction) */
+.hero {
+  line-height: 0;
+  aspect-ratio: 2 / 1;
+  overflow: hidden;
+}
+.hero img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+.hero-placeholder {
+  width: 100%;
+  padding: 80px 32px;
+  text-align: center;
+  background: #d6dde5;
+  font-size: 13px;
+  color: #555;
+  letter-spacing: 0.04em;
+}
+
+/* ─── 2. HEADLINE — one headline, two lines, uniform styling ─── */
+.headline-block {
+  text-align: center;
+  padding: 44px 40px 30px;
+}
+.headline {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 28px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+  color: #0d0d0d;
+}
+
+/* ─── 3. BORDERED INTRO PARAGRAPH ───
+   Ogilvy reference: bold, prominent, top+bottom borders only.
+   Reads as a self-contained authoritative paragraph.
+─── */
+.intro-box {
+  border-top: 1.5px solid #0d0d0d;
+  border-bottom: 1.5px solid #0d0d0d;
+  padding: 16px 8px;
+  margin-bottom: 28px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.7;
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+}
+
+/* ─── 4. THREE-COLUMN BODY COPY ───
+   Ogilvy editorial standard:
+   — Tight, consistent line-height (1.52)
+   — Uniform paragraph spacing (margin-bottom: 10px)
+   — Fully justified, hyphens active
+   — Subtle column rule for clean separation
+   — Lead-ins bold, inline, no extra spacing
+─── */
+.body-columns {
+  column-count: 3;
+  column-gap: 30px;
+  column-rule: 0.5px solid #c8c2b8;
+  text-align: justify;
+  font-size: 13px;
+  line-height: 1.52;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  overflow-wrap: break-word;
+  word-spacing: 0.01em;
+  orphans: 3;
+  widows: 3;
+}
+
+.fact {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  text-indent: 0;
+}
+
+/* Number: bold, same size as body */
+.fact-num {
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Lead-in: bold, flows inline with body — Ogilvy standard */
+.fact-lead {
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* ─── INVITATION — natural flow after fact 15 ─── */
+/* Invitation title: same typeface/weight as headline, no uppercase, no extra tracking.
+   Flows inline with column, not centred — consistent with Ogilvy column heads. */
+.invitation-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 14px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  text-align: center;
+  margin: 14px 0 6px;
+}
+.invitation-body p {
+  font-size: 13px;
+  line-height: 1.52;
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  text-indent: 1.4em;
+  margin-bottom: 9px;
+}
+
+/* ─── 5. OPT-IN FORM ───
+   Priestley template structure:
+   — Header label (top left)
+   — Description line
+   — First name + Last name (same row)
+   — Email (full width)
+   — Kelly green CTA (full width, same width as email field)
+   — Disclaimer below CTA
+   #fffcfd background · 6px outer border (1/16") · 3px field borders (1/32")
+─── */
+.optin-section {
+  max-width: 1020px;
+  margin: 30px auto 0;
+  padding: 0 32px 56px;
+}
+
+.optin-box {
+  background: #fffcfd;
+  border: 6px solid #1a1a1a;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Header band — mirrors Priestley's top label area */
+.optin-header {
+  padding: 20px 28px 16px;
+  border-bottom: 1px solid #d0c9be;
+}
+.optin-brand {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #0d0d0d;
+  display: block;
+  margin-bottom: 6px;
+}
+.optin-desc {
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Form body */
+.optin-body {
+  padding: 20px 28px 24px;
+}
+.name-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.name-row input,
+.email-field {
+  border: 3px solid #1a1a1a;
+  padding: 11px 13px;
+  font-family: Georgia, serif;
+  font-size: 13px;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  display: block;
+  color: #0d0d0d;
+  transition: border-color 0.2s;
+}
+.name-row input::placeholder,
+.email-field::placeholder {
+  color: #999;
+  font-style: italic;
+}
+.name-row input:focus,
+.email-field:focus { border-color: #4CBB17; }
+.email-field { margin-bottom: 10px; }
+
+/* CTA button — full width, Kelly green, same width as email field */
+.cta-btn {
+  display: block;
+  width: 100%;
+  background: #4CBB17;
+  color: #fff;
+  border: none;
+  padding: 14px 12px;
+  font-family: Georgia, serif;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  text-align: center;
+  transition: background 0.2s;
+}
+.cta-btn:hover { background: #3da812; }
+
+/* Disclaimer below CTA */
+.optin-disclaimer {
+  font-size: 11px;
+  font-style: italic;
+  color: #666;
+  text-align: center;
+  margin-top: 11px;
+  line-height: 1.55;
+}
+
+.optin-confirm {
+  display: none;
+  padding: 28px;
+  text-align: center;
+  font-style: italic;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* ─── 6. OFFER FORM — STEP 2 (hidden, revealed after opt-in) ─── */
+.offer-section {
+  display: block;
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 32px 60px;
+}
+.offer-box {
+  background: #fffcfd;
+  border: 6px solid #1a1a1a;
+  overflow: hidden;
+}
+
+/* Header band */
+.offer-header {
+  padding: 22px 28px 18px;
+  border-bottom: 1px solid #d0c9be;
+}
+.offer-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: normal;
+  color: #0d0d0d;
+  display: block;
+  margin-bottom: 6px;
+}
+.offer-subtitle {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #555;
+  font-style: italic;
+}
+
+/* Form body */
+.offer-body {
+  padding: 24px 28px 28px;
+}
+
+/* Section headings */
+.offer-section-label {
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #888;
+  border-bottom: 1px solid #e0dbd3;
+  padding-bottom: 5px;
+  margin: 20px 0 14px;
+}
+.offer-section-label:first-child { margin-top: 0; }
+
+/* Text fields */
+.offer-field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.offer-form input[type="text"],
+.offer-form input[type="url"],
+.offer-form input[type="number"],
+.offer-form textarea {
+  width: 100%;
+  border: 3px solid #1a1a1a;
+  padding: 10px 12px;
+  font-family: Georgia, serif;
+  font-size: 13px;
+  background: transparent;
+  outline: none;
+  display: block;
+  color: #0d0d0d;
+  transition: border-color 0.2s;
+}
+.offer-form input[type="text"]::placeholder,
+.offer-form input[type="url"]::placeholder,
+.offer-form input[type="number"]::placeholder,
+.offer-form textarea::placeholder { color: #999; font-style: italic; }
+.offer-form input[type="text"]:focus,
+.offer-form input[type="url"]:focus,
+.offer-form input[type="number"]:focus,
+.offer-form textarea:focus { border-color: #4CBB17; }
+.offer-form textarea { min-height: 80px; resize: vertical; margin-bottom: 0; }
+.offer-form .full-width { margin-bottom: 10px; }
+
+/* Radio groups */
+.radio-group {
+  margin-bottom: 14px;
+}
+.radio-group-label {
+  font-size: 10.5px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
+  color: #0d0d0d;
+}
+.radio-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 16px;
+}
+.radio-options label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12.5px;
+  line-height: 1.4;
+  cursor: pointer;
+  color: #0d0d0d;
+}
+.radio-options input[type="radio"] {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  accent-color: #4CBB17;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Submit */
+.offer-submit {
+  display: block;
+  width: 100%;
+  background: #0d0d0d;
+  color: #f5f2ed;
+  border: none;
+  padding: 14px 12px;
+  font-family: Georgia, serif;
+  font-size: 13.5px;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  margin-top: 22px;
+  transition: background 0.2s;
+}
+.offer-submit:hover { background: #2a2a2a; }
+.offer-note {
+  font-size: 11px;
+  font-style: italic;
+  color: #888;
+  text-align: center;
+  margin-top: 10px;
+}
+.offer-confirm {
+  display: none;
+  text-align: center;
+  font-style: italic;
+  font-size: 13px;
+  padding: 28px;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* ─── FOOTER ─── */
+footer {
+  border-top: 1px solid #d8d3cb;
+  text-align: center;
+  padding: 24px 32px;
+  font-size: 11px;
+  color: #9ca3af;
+  letter-spacing: 0.04em;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 720px) {
+  .body-columns { column-count: 2; }
+  .headline { font-size: 22px; }
+}
+@media (max-width: 480px) {
+  .body-columns { column-count: 1; }
+  .name-row { grid-template-columns: 1fr; }
+  .content, .optin-section, .offer-section { padding-left: 18px; padding-right: 18px; }
+  .headline { font-size: 20px; }
+  .headline-block { padding: 28px 10px 20px; }
+}
+
+</style>
+</head>
+<body>
+
+<div class="content">
+
+  <!-- LOGO MASTHEAD -->
+  <div class="logo-header">
+    <div class="logo-mark">
+      <div class="logo-circle">CM</div>
+      <div>
+        <div class="logo-name">Cliquemaven</div>
+        <div class="logo-tagline">Domain Acquisitions</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1. HERO — constrained to content/column width -->
+  <div class="hero">
+    <img
+      src="Nunkauf.com Skydive image.png"
+      alt="Nunkauf.com — Premium domain for acquisition"
+      onerror="this.style.display='none';document.getElementById('hero-ph').style.display='block'"
+    >
+    <div id="hero-ph" class="hero-placeholder" style="display:none;">
+      [ Nunkauf.com Skydive image.png — place in this folder ]
+    </div>
+  </div>
+
+  <!-- 2. HEADLINE — bold, no italic -->
+  <div class="headline-block">
+    <h1 class="headline">
+      It takes 50 milliseconds to decide whether a domain is trustworthy.<br>
+      With Nunkauf.com for sale, time is already on your side.
+    </h1>
+  </div>
+
+  <!-- 3. BORDERED INTRO PARAGRAPH
+       Top & bottom borders only. Bold paragraph. Ogilvy reference.
+  -->
+  <div class="intro-box">
+    Nunkauf.com is currently available for acquisition within the $50,000&ndash;$150,000 range.
+    Over the last two decades, premium .com domains have established the following; the record
+    is consistent: short, globally recognised domains command higher values and are kept longer
+    once acquired. Here, in the interest of clarity, are 15 facts:
+  </div>
+
+  <!-- 4. THREE-COLUMN BODY COPY
+       CSS column-count:3 auto-balances all facts + invitation.
+       Lead-ins: bold, no italic. Clean period-space spacing.
+  -->
+  <div class="body-columns">
+
+    <div class="fact">
+      <span class="fact-num">1. </span><span class="fact-lead">First impressions happen in milliseconds.</span> Credibility is judged almost instantly by design and clarity. Nunkauf.com leverages this instinct: unmistakably professional, it signals trust before a single word is read, turning curiosity into engagement.
+    </div>
+
+    <div class="fact">
+      <span class="fact-num">2. </span><span class="fact-lead">Short names, strong results.</span> &ldquo;Short business names &mdash; one to three words in length &mdash; are 50 percent more likely to become prosperous,&rdquo; as reported by researchers at M.I.T. (Massachusetts Institute of Technology).
+    </div>
+
+    <div class="fact">
+      <span class="fact-num">3. </span><span class="fact-lead">Fluency builds authority.</span> Domains that are simple, easy to read, and effortless to say make your brand feel professional and commanding &mdash; so Nunkauf.com signals market leadership before a single word is even read.
+    </div>
+
+    <div class="fact">
+      <span class="fact-num">4. </span><span class="fact-lead">Intent-focused.</span> Nunkauf.com is short, sharp, and instantly understood &mdash; a .com that the brain loves. Effortless to read, easy to remember, it boosts credibility, sparks recall, and captures attention the moment it is seen. Direct visitors are ready to act. Nunkauf.com makes it simple for them to find you, increasing the chance that high-intent traffic becomes real customers.
+    </div>
+
+    <div class="fact">
+      <span class="fact-num">5. </span><span class="fact-lead">Domain name breakthrough.</span> Our brains are wired to remember sounds. The phonological loop &mdash; the part that holds verbal information &mdash; makes an unforgettable name like Nunkauf.com stick. Every time it is heard, seen, or spoken, it lights up neurons, sending signals along reinforced pathways. Repetition strengthens the connection, sparking curiosity, capturing attention, and making the name impossible to forget.
+    </div>
+
+    <div class="fact">
+      <span class="fact-num">6. </span><span class="fact-lead">Mouthfeel and the art of persuasion.</span> Nunkauf.com triggers a &ldquo;mouthfeel&rdquo; &mdash; a subtle, emotional impact that aligns with your customer&rsquo;s ambitions. It activates the brain&rsquo;s reward centres, nudging attention, engagement, and action.
+    </div>
+
+    <div class="fact">
+      <span class="fact-num">7. </span><span class="fact-lead">Brand velocity.</span> Domains conveying clear meaning make a site appear more relevant, increasing the likelihood users take action. Nunkauf.com is flexible and scalable, reducing rebranding risk and supporting long-term growth.
+    </div>
+
+    <div class="fact">
+      <span class="fact-num">8. </span><span class="fact-lead">A flexible growth engine.</span> Nunkauf.com adapts effortlessly to shifts in strategy, market trends, or product lines, letting your brand evolve without ever changing its core address.
+    </div>
+
+    <div class="fact">
+      <span class="fact-num">9. </span><span class="fact-lead">Direct traffic.</span> Visitors who type a domain directly are not browsing; they are arriving with purpose. Multiple attribution studies show that direct traffic converts at two to three times the rate of paid or referral traffic. Short, intuitive domains capture more of this behaviour. Nunkauf.com lowers the friction between intention and arrival; that difference compounds over time.
+    </div>
+
+    <div class="fact">
+      <span class="fact-num">10. </span><span class="fact-lead">Customer gold standard.</span> Direct traffic is the cheapest traffic you will ever own. Visitors who type a URL convert more often because they arrive with intent, not random discovery. When a customer recalls your domain from memory, they are not wandering in &mdash; they choose you.
+    </div>
+
+    <div class="fact">
+      <span class="fact-num">11. </span><span class="fact-lead">Costly to change.</span> Once a business reaches scale, domain changes become exceptional rather than routine. The reasons are practical: loss of trust, disruption to direct traffic, and measurable SEO decay. The data is clear &mdash; companies that outgrow their original domain rarely replace it voluntarily. This makes the initial choice unusually consequential, and mistakes disproportionately expensive to correct later.
+    </div>
+
+    <div class="fact">
+      <span class="fact-num">12. </span><span class="fact-lead">A capital asset.</span> In the aftermarket, .com domains consistently account for the majority of total transaction value. This is not because they are fashionable, but because they are liquid, globally recognised, and easily transferred. Nunkauf.com does not disappear after purchase; it remains an asset with resale potential, which materially reduces downside risk compared to most branding investments.
+    </div>
+
+    <div class="fact">
+      <span class="fact-num">13. </span><span class="fact-lead">Scarcity &mdash; absolute.</span> There is only one Nunkauf.com. Not a claim of urgency; it is a statement of fact. Marketing messages can be rewritten, campaigns paused, and strategies revised. A domain name cannot. Once it is owned, it is unavailable &mdash; permanently. Scarcity here is structural, not promotional, and delay introduces a risk that cannot be mitigated later.
+    </div>
+
+    <div class="fact">
+      <span class="fact-num">14. </span><span class="fact-lead">Strategic flexibility.</span> Nunkauf is a compressed phrase derived from two German words meaning &ldquo;buy now.&rdquo; While not required for value in English-speaking markets, this structure creates optionality. For companies with current or future exposure to German-speaking audiences, the phrase carries immediate semantic clarity that can be activated without rebranding or acquiring an additional domain. The value lies not in necessity, but in strategic flexibility.
+    </div>
+
+    <div class="fact">
+      <span class="fact-num">15. </span><span class="fact-lead">Risk asymmetry.</span> The cost of acquiring Nunkauf.com is finite and known. The cost of not acquiring it &mdash; while a competitor does &mdash; is open-ended. This asymmetry is not hypothetical; it is the consistent pattern of premium domain markets. Inaction is not a neutral position. It is a decision with consequences that compound.
+    </div>
+
+    <!-- Invitation — flows naturally as continuation of final column -->
+    <div class="invitation-title">Invitation</div>
+
+    <div class="invitation-body">
+      <p>We invite you to make an offer to acquire nunkauf.com.</p>
+      <p>In online commerce, brand decisions are made quickly. Evidence from consumer behaviour research shows that names which are short, pronounceable, and distinctive reduce friction and increase perceived legitimacy at first contact.</p>
+      <p>Nunkauf.com is a single, transferable .com asset intended for companies that treat naming as infrastructure, not decoration. It is suitable for organisations prioritising trust, repeat usage, and long-term brand equity. Offers for this category of premium domain typically trade in the $50,000 to $150,000 range. If this aligns with how you value strategic brand assets, we invite you to submit your offer below.</p>
+    </div>
+
+  </div>
+  <!-- /body-columns -->
+
+</div>
+<!-- /content -->
+
+
+<!-- 5. OPT-IN FORM — Priestley template structure, Nunkauf modifications -->
+<div class="optin-section">
+  <div class="optin-box">
+
+    <!-- Header band: brand label + description (Priestley top section) -->
+    <div class="optin-header">
+      <span class="optin-brand">Nunkauf.com</span>
+      <p class="optin-desc">Please provide your details below. All enquiries are treated in strict confidence. No obligation is created by registering interest.</p>
+    </div>
+
+    <!-- Form body: fields + CTA + disclaimer -->
+    <div class="optin-body">
+      <form id="optin-form">
+        <!-- Formspree hidden fields -->
+        <input type="hidden" name="_subject" value="Nunkauf.com — New Enquiry">
+        <input type="hidden" name="_next" value="">
+        <div class="name-row">
+          <input type="text" id="fn" name="first_name" placeholder="First name" required>
+          <input type="text" id="ln" name="last_name" placeholder="Last name" required>
+        </div>
+        <input class="email-field" type="email" id="em" name="email" placeholder="Email address" required>
+        <button type="submit" class="cta-btn">Request Acquisition Details</button>
+        <p class="optin-disclaimer">
+          Positioned within the $50,000&ndash;$150,000 acquisition range.<br>
+          Final valuation depends on buyer profile and use case.
+        </p>
+      </form>
+
+      <div class="optin-confirm" id="optin-confirm">
+        Your details have been received.<br>
+        A confidential summary will be sent to the address provided.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- 6. OFFER FORM — STEP 2 (hidden until opt-in submit) -->
+<div class="offer-section" id="offer-section">
+  <div class="offer-box">
+
+    <!-- Header -->
+    <div class="offer-header">
+      <span class="offer-title">Nunkauf.com &mdash; Offer for Consideration</span>
+      <p class="offer-subtitle">Submissions are reviewed individually. This is not a commitment to sell. Final consideration depends on buyer profile, intended use, and offer strength.</p>
+    </div>
+
+    <!-- Form -->
+    <div class="offer-body">
+      <form class="offer-form" id="offer-form">
+
+        <!-- Formspree hidden fields -->
+        <input type="hidden" name="_subject" value="Nunkauf.com — Offer Submission">
+        <input type="hidden" name="_next" value="">
+
+        <!-- Section 1: Organization -->
+        <div class="offer-section-label">Organization</div>
+
+        <div class="offer-field-row">
+          <input type="text" id="o-company" name="company" placeholder="Company or organisation name">
+          <input type="url" id="o-website" name="website" placeholder="Website (if applicable)">
+        </div>
+
+        <div class="radio-group">
+          <span class="radio-group-label">Principal role</span>
+          <div class="radio-options">
+            <label><input type="radio" name="role" value="Founder / Owner"> Founder / Owner</label>
+            <label><input type="radio" name="role" value="Executive (CEO, CMO, etc.)"> Executive (CEO, CMO, etc.)</label>
+            <label><input type="radio" name="role" value="Investor"> Investor</label>
+            <label><input type="radio" name="role" value="Adviser / Representative"> Adviser / Representative</label>
+          </div>
+        </div>
+
+        <!-- Section 2: Acquisition Parameters -->
+        <div class="offer-section-label">Acquisition Parameters</div>
+
+        <div class="radio-group">
+          <span class="radio-group-label">Intended use of Nunkauf.com</span>
+          <div class="radio-options">
+            <label><input type="radio" name="intended_use" value="Primary brand domain"> Primary brand domain</label>
+            <label><input type="radio" name="intended_use" value="Product or campaign launch"> Product or campaign launch</label>
+            <label><input type="radio" name="intended_use" value="Strategic acquisition / investment"> Strategic acquisition / investment</label>
+            <label><input type="radio" name="intended_use" value="Under evaluation"> Under evaluation</label>
+          </div>
+        </div>
+
+        <div class="radio-group">
+          <span class="radio-group-label">Acquisition timeline</span>
+          <div class="radio-options">
+            <label><input type="radio" name="timeline" value="Immediate"> Immediate</label>
+            <label><input type="radio" name="timeline" value="Within 30 days"> Within 30 days</label>
+            <label><input type="radio" name="timeline" value="1-3 months"> 1&ndash;3 months</label>
+            <label><input type="radio" name="timeline" value="Exploratory"> Exploratory</label>
+          </div>
+        </div>
+
+        <div class="radio-group">
+          <span class="radio-group-label">Investment range under consideration</span>
+          <div class="radio-options">
+            <label><input type="radio" name="investment_range" value="$50,000 - $75,000"> $50,000 &ndash; $75,000</label>
+            <label><input type="radio" name="investment_range" value="$75,001 - $100,000"> $75,001 &ndash; $100,000</label>
+            <label><input type="radio" name="investment_range" value="$100,001 - $125,000"> $100,001 &ndash; $125,000</label>
+            <label><input type="radio" name="investment_range" value="$125,001 - $150,000"> $125,001 &ndash; $150,000</label>
+            <label><input type="radio" name="investment_range" value="$150,000+"> $150,000+</label>
+          </div>
+        </div>
+
+        <!-- Section 3: Offer -->
+        <div class="offer-section-label">Offer</div>
+
+        <input type="text" id="o-amount" name="offer_amount" class="full-width" placeholder="Offer amount (USD)">
+
+        <textarea id="o-context" name="additional_context" placeholder="Additional context — include any relevant details regarding intended use, decision process, or timing (optional)"></textarea>
+
+        <button type="submit" class="offer-submit">Submit Offer for Review</button>
+        <p class="offer-note">Only qualified submissions will receive a response.</p>
+
+      </form>
+
+      <div class="offer-confirm" id="offer-confirm">
+        Your submission has been received and will be reviewed in confidence.<br>
+        Qualified submissions receive a response within 2 business days.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+  nunkauf.com &nbsp;&middot;&nbsp; Enquiries: <strong>Miles Jenks</strong> &nbsp;&middot;&nbsp; <strong>sales@cliquemaven.com</strong> &nbsp;&middot;&nbsp; All enquiries are treated in strict confidence
+</footer>
+
+
+<script>
+/*
+  FORMSPREE SETUP REQUIRED — see setup-guide.md
+  Replace the two IDs below with your actual Formspree form IDs
+  after creating your free account at formspree.io
+*/
+var OPTIN_FORM_ID  = 'mvkpagyb';   // e.g. 'xyzabcde'
+var OFFER_FORM_ID  = 'mdengkjv';    // e.g. 'xyzfghij'
+
+(function(){
+
+  /* ── OPT-IN FORM ── */
+  document.getElementById('optin-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    var f = document.getElementById('fn').value.trim();
+    var l = document.getElementById('ln').value.trim();
+    var m = document.getElementById('em').value.trim();
+    if (!f || !l || !m || !m.includes('@')) {
+      alert('Please complete all fields.'); return;
+    }
+
+    var btn = this.querySelector('button[type="submit"]');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+
+    var data = new FormData(this);
+
+    fetch('https://formspree.io/f/' + OPTIN_FORM_ID, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(function(res){
+      if (res.ok) {
+        document.getElementById('optin-form').style.display = 'none';
+        document.getElementById('optin-confirm').style.display = 'block';
+        document.getElementById('offer-section').scrollIntoView({ behavior: 'smooth' });
+      } else {
+        btn.textContent = 'Request Acquisition Details';
+        btn.disabled = false;
+        alert('There was a problem sending your details. Please try again.');
+      }
+    })
+    .catch(function(){
+      btn.textContent = 'Request Acquisition Details';
+      btn.disabled = false;
+      alert('There was a problem sending your details. Please try again.');
+    });
+  });
+
+  /* ── OFFER FORM ── */
+  document.getElementById('offer-form').addEventListener('submit', function(e){
+    e.preventDefault();
+
+    var btn = this.querySelector('button[type="submit"]');
+    btn.textContent = 'Submitting…';
+    btn.disabled = true;
+
+    var data = new FormData(this);
+
+    fetch('https://formspree.io/f/' + OFFER_FORM_ID, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(function(res){
+      if (res.ok) {
+        document.getElementById('offer-form').style.display = 'none';
+        document.getElementById('offer-confirm').style.display = 'block';
+      } else {
+        btn.textContent = 'Submit Offer for Review';
+        btn.disabled = false;
+        alert('There was a problem submitting your offer. Please try again.');
+      }
+    })
+    .catch(function(){
+      btn.textContent = 'Submit Offer for Review';
+      btn.disabled = false;
+      alert('There was a problem submitting your offer. Please try again.');
+    });
+  });
+
+})();
+</script>
+
+</body>
+</html>
