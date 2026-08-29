@@ -72,10 +72,10 @@ body {
 }
 
 /* ─── 1. HERO IMAGE — same width as content/columns ─── */
-/* aspect-ratio: 2/1 = original */
+/* 3:1 hero — face and hand text both visible, sky/landscape cropped */
 .hero {
   line-height: 0;
-  aspect-ratio: 2 / 1;
+  aspect-ratio: 3 / 1;
   overflow: hidden;
 }
 .hero img {
@@ -83,7 +83,7 @@ body {
   height: 100%;
   display: block;
   object-fit: cover;
-  object-position: center center;
+  object-position: center 42%;
 }
 .hero-placeholder {
   width: 100%;
