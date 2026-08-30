@@ -72,10 +72,11 @@ body {
 }
 
 /* ─── 1. HERO IMAGE — same width as content/columns ─── */
-/* 3:1 hero — face and hand text both visible, sky/landscape cropped */
+/* hero capped at 45vh — adapts to any screen, headline always above fold */
 .hero {
   line-height: 0;
-  aspect-ratio: 3 / 1;
+  aspect-ratio: 2 / 1;
+  max-height: 45vh;
   overflow: hidden;
 }
 .hero img {
@@ -83,7 +84,7 @@ body {
   height: 100%;
   display: block;
   object-fit: cover;
-  object-position: center 42%;
+  object-position: center 35%;
 }
 .hero-placeholder {
   width: 100%;
