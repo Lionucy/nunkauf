@@ -748,17 +748,13 @@ footer {
 
 
 <script>
-/*
-  FORMSPREE SETUP REQUIRED — see setup-guide.md
-  Replace the two IDs below with your actual Formspree form IDs
-  after creating your free account at formspree.io
-*/
-var OPTIN_FORM_ID  = 'mvkpagyb';   // e.g. 'xyzabcde'
-var OFFER_FORM_ID  = 'mdengkjv';    // e.g. 'xyzfghij'
+var OFFER_FORM_ID  = 'mdengkjv';
+var GR_API_KEY     = 'api-key 79xp77s2rctegnxf3vaq6m3pxqvyiv76';
+var GR_CAMPAIGN_ID = 'uh8Un';
 
 (function(){
 
-  /* ── OPT-IN FORM ── */
+  /* ── OPT-IN FORM → GetResponse ── */
   document.getElementById('optin-form').addEventListener('submit', function(e){
     e.preventDefault();
     var f = document.getElementById('fn').value.trim();
@@ -772,15 +768,20 @@ var OFFER_FORM_ID  = 'mdengkjv';    // e.g. 'xyzfghij'
     btn.textContent = 'Sending…';
     btn.disabled = true;
 
-    var data = new FormData(this);
-
-    fetch('https://formspree.io/f/' + OPTIN_FORM_ID, {
+    fetch('https://api.getresponse.com/v3/contacts', {
       method: 'POST',
-      body: data,
-      headers: { 'Accept': 'application/json' }
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Auth-Token': GR_API_KEY
+      },
+      body: JSON.stringify({
+        name: f + ' ' + l,
+        email: m,
+        campaign: { campaignId: GR_CAMPAIGN_ID }
+      })
     })
     .then(function(res){
-      if (res.ok) {
+      if (res.ok || res.status === 201 || res.status === 202) {
         document.getElementById('optin-form').style.display = 'none';
         document.getElementById('optin-confirm').style.display = 'block';
         document.getElementById('offer-section').scrollIntoView({ behavior: 'smooth' });
